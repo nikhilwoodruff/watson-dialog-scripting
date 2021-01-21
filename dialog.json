@@ -1,22 +1,6 @@
 {
     "intents": [
         {
-            "intent": "Ask_who_Karl_is",
-            "examples": [
-                {
-                    "text": "Ask who Karl is"
-                }
-            ]
-        },
-        {
-            "intent": "Suggest_natural_causes",
-            "examples": [
-                {
-                    "text": "Suggest natural causes"
-                }
-            ]
-        },
-        {
             "intent": "Ask_if_he_could_have_fallen",
             "examples": [
                 {
@@ -25,18 +9,50 @@
             ]
         },
         {
-            "intent": "Search_around_the_body",
+            "intent": "End_the_interview",
             "examples": [
                 {
-                    "text": "Search around the body"
+                    "text": "End the interview"
                 }
             ]
         },
         {
-            "intent": "Head_back_to_the_car",
+            "intent": "Ask_about_the_man_living_alone.",
             "examples": [
                 {
-                    "text": "Head back to the car"
+                    "text": "Ask about the man living alone."
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_he_saw_anything",
+            "examples": [
+                {
+                    "text": "Ask if he saw anything"
+                }
+            ]
+        },
+        {
+            "intent": "Agree,_go_back_and_interrogate_the_lone_walker",
+            "examples": [
+                {
+                    "text": "Agree, go back and interrogate the lone walker"
+                }
+            ]
+        },
+        {
+            "intent": "Try_the_doorbell_again",
+            "examples": [
+                {
+                    "text": "Try the doorbell again"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_to_look_at_the_body",
+            "examples": [
+                {
+                    "text": "Ask to look at the body"
                 }
             ]
         },
@@ -49,34 +65,42 @@
             ]
         },
         {
-            "intent": "State_he_died_from_blunt_force_trauma",
+            "intent": "Ask_about_hearing_a_noise",
             "examples": [
                 {
-                    "text": "State he died from blunt force trauma"
+                    "text": "Ask about hearing a noise"
                 }
             ]
         },
         {
-            "intent": "Check_the_time",
+            "intent": "Ask_for_the_cause_of_death",
             "examples": [
                 {
-                    "text": "Check the time"
+                    "text": "Ask for the cause of death"
                 }
             ]
         },
         {
-            "intent": "Suggest_he_fell_from_the_wall",
+            "intent": "Send_Haynes_round_the_windows_to_look",
             "examples": [
                 {
-                    "text": "Suggest he fell from the wall"
+                    "text": "Send Haynes round the windows to look"
                 }
             ]
         },
         {
-            "intent": "Ask_what_happened",
+            "intent": "Ask_whether_they_were_near_the_castle",
             "examples": [
                 {
-                    "text": "Ask what happened"
+                    "text": "Ask whether they were near the castle"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_any_other_DNA_was_found",
+            "examples": [
+                {
+                    "text": "Ask if any other DNA was found"
                 }
             ]
         },
@@ -89,10 +113,170 @@
             ]
         },
         {
-            "intent": "Ask_to_look_at_the_body",
+            "intent": "Ask_if_he_saw_anybody",
             "examples": [
                 {
-                    "text": "Ask to look at the body"
+                    "text": "Ask if he saw anybody"
+                }
+            ]
+        },
+        {
+            "intent": "Check_the_time",
+            "examples": [
+                {
+                    "text": "Check the time"
+                }
+            ]
+        },
+        {
+            "intent": "Search_around_the_body",
+            "examples": [
+                {
+                    "text": "Search around the body"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_his_name",
+            "examples": [
+                {
+                    "text": "Ask his name"
+                }
+            ]
+        },
+        {
+            "intent": "Disagree_-_but_go_to_find_the_lone_young_man",
+            "examples": [
+                {
+                    "text": "Disagree - but go to find the lone young man"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_he_was_with_anyone",
+            "examples": [
+                {
+                    "text": "Ask if he was with anyone"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_there_s_anything_else",
+            "examples": [
+                {
+                    "text": "Ask if there's anything else"
+                }
+            ]
+        },
+        {
+            "intent": "Ring_the_doorbell_again",
+            "examples": [
+                {
+                    "text": "Ring the doorbell again"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_he_s_alright",
+            "examples": [
+                {
+                    "text": "Ask if he's alright"
+                }
+            ]
+        },
+        {
+            "intent": "Suggest_he_fell_from_the_wall",
+            "examples": [
+                {
+                    "text": "Suggest he fell from the wall"
+                }
+            ]
+        },
+        {
+            "intent": "Head_back_to_the_car",
+            "examples": [
+                {
+                    "text": "Head back to the car"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_who_Karl_is",
+            "examples": [
+                {
+                    "text": "Ask who Karl is"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_her_partner_mentioned_anything",
+            "examples": [
+                {
+                    "text": "Ask if her partner mentioned anything"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_for_the_time_of_death",
+            "examples": [
+                {
+                    "text": "Ask for the time of death"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_we_know_who_he_is",
+            "examples": [
+                {
+                    "text": "Ask if we know who he is"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_what_happened",
+            "examples": [
+                {
+                    "text": "Ask what happened"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_where_specifically_he_was",
+            "examples": [
+                {
+                    "text": "Ask where specifically he was"
+                }
+            ]
+        },
+        {
+            "intent": "Suggest_natural_causes",
+            "examples": [
+                {
+                    "text": "Suggest natural causes"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_anything_else_was_found_at_the_scene",
+            "examples": [
+                {
+                    "text": "Ask if anything else was found at the scene"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_the_fall_killed_him",
+            "examples": [
+                {
+                    "text": "Ask if the fall killed him"
+                }
+            ]
+        },
+        {
+            "intent": "State_he_died_from_blunt_force_trauma",
+            "examples": [
+                {
+                    "text": "State he died from blunt force trauma"
                 }
             ]
         }
@@ -266,7 +450,7 @@
                     {
                         "values": [
                             {
-                                "text": "<speak>With the sun fully up, there's a lot more people out as you drive through the streets. You stop at a row of houses, just over the road from the castle. [Player\"Ok, we'll check these first.\" You say to Haynes. You get out, and look at the first few houses. Number 13 has a very nicely decorated driveway, plenty of plantlife and a few baskets on the doorstep, but no car. 14 has two hatchbacks, and you can hear talking inside. 15 is not very decorated, and has a sedan outside. 16 has a Ford Focus, and a well-looked after paved driveway. You walk up to number 14 and reach for the doorbell - without warning it opens suddenly.</speak>"
+                                "text": "<speak>With the sun fully up, there's a lot more people out as you drive through the streets. You stop at a row of houses, just over the road from the castle. [Player\"Ok, we'll check these first.\" You say to Haynes. You get out, and look at the first few houses. Number 13 has a very nicely decorated driveway, plenty of plantlife and a few baskets on the doorstep, but no car. 14 has two hatchbacks, and you can hear talking inside. 15 is not very decorated, and has a sedan outside. 16 has a Ford Focus, and a well-looked after paved driveway. You walk up to number 14 and reach for the doorbell - without warning it opens suddenly, revealing a slightly confused woman . There's a small child behind her, and a middle-aged man at the end of the hallway. <voice name=\"Geraint\">\"Can I help you?\"  She asks. <voice name=\"Geraint\">\"Sorry to disturb. Just a few questions about anything you might have heard last night?\".  [Angela]\"Uh, sure.\" The man shepherds the small child back through the hallway. [Player]\"Can I take your name?\" [Angela]\"It's Angela Smith. That's my husband Mark back there, we're just on the school run.\"</voice></voice>\nDo you: \nAsk about hearing a noise?\nAsk whether they were near the castle?\n</speak>"
                             }
                         ],
                         "response_type": "text",
@@ -278,6 +462,665 @@
             "dialog_node": "13",
             "parent": "11",
             "conditions": "#Wait_for_a_few_hours"
+        },
+        {
+            "type": "standard",
+            "title": "14",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Sorry, no. I don't remember hearing anything like that. We were watching a film last night though.\"</voice>\nDo you: \nAsk whether they were near the castle?\nAsk if her partner mentioned anything?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "14",
+            "parent": "13",
+            "conditions": "#Ask_about_hearing_a_noise"
+        },
+        {
+            "type": "standard",
+            "title": "15",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Well we do take the kids occasionally. But we haven't actually been in weeks, things have been a bit busy. Sorry, will this take long? I've got to get Charlie to school.\"</voice>\nDo you: \nAsk if her partner mentioned anything?\nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "15",
+            "parent": "14",
+            "conditions": "#Ask_whether_they_were_near_the_castle"
+        },
+        {
+            "type": "standard",
+            "title": "16",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"(pauses) No, he didn't hear anything either.\"</voice>\nDo you: \nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "16",
+            "parent": "15",
+            "conditions": "#Ask_if_her_partner_mentioned_anything"
+        },
+        {
+            "type": "standard",
+            "title": "17",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Thanks for your time, that's all.\" You and Haynes walk back onto the street. <voice name=\"Geraint\">\"15 looks a bit quiet.\"</voice></voice> You look at the house; it's certainly not well-kept, and the driveway is far overgrown. You walk up and ring the doorbell. There's no answer.\nDo you: \nTry the doorbell again?\nSend Haynes round the windows to look?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "17",
+            "parent": "16",
+            "conditions": "#End_the_interview"
+        },
+        {
+            "type": "standard",
+            "title": "18",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>You try the doorbell again, and knock as well. Still no answer\nDo you: \nRing the doorbell again?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "18",
+            "parent": "17",
+            "conditions": "#Try_the_doorbell_again"
+        },
+        {
+            "type": "standard",
+            "title": "20",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>The door suddenly swings open. <voice name=\"Geraint\">\"Yes?\" An irritated man answers. His hair is black and unkempt, and his eyes are bloodshot. <voice name=\"Geraint\">\"Sorry to disturb. We're just wondering if you heard anything last night out of the ordinary.\" The man looks at you suspiciously.[David]\"Er, no. No, I didn't. \"</voice></voice> He shifts his feet.\nDo you: \nAsk his name?\nAsk if he's alright?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "20",
+            "parent": "18",
+            "conditions": "#Ring_the_doorbell_again"
+        },
+        {
+            "type": "standard",
+            "title": "21",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"It's David. Heaney. Look, I've got some place I need to be, will this take long?\" Haynes interjects - <voice name=\"Geraint\">\"Not long, we're just collecting information from everyone on the street. If you wouldn't mind?\"</voice></voice> The man seems to relax.\nDo you: \nAsk if he's alright?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "21",
+            "parent": "20",
+            "conditions": "#Ask_his_name"
+        },
+        {
+            "type": "standard",
+            "title": "22",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Yes, I'm fine. Yes, look I really have to go. Sorry.\" The door closes. Haynes gives you a look. <voice name=\"Geraint\">\"We might need to come back to that one. Ok, where's next? Let's check ...\" You try and make out the number of the house opposite: [Player]\"Number 13\". You walk up, knock on the door and wait. There's no answer immediately, but you can see a figure through the frosted glass slowly making their way over. When the door does open, you see an elderly man. [Player]\"Sorry to disturb you, sir. We're just checking if the residents of this street heard anything in the early hours of last night.\" The man chuckles to himself, breaking out into a cough as he does so. <voice name=\"Geraint\">\"I'm afraid we won't be of much help to you. Margaret and I didn't stay up past eight last night.\" [Player]\"I see. Can I take your name?\" [Peter]\"It's Peter Armstrong. That's Margaret, my wife, she's in the living room.\"</voice></voice></voice>\nDo you: \nAsk about the man living alone.?\nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "22",
+            "parent": "21",
+            "conditions": "#Ask_if_he_s_alright"
+        },
+        {
+            "type": "standard",
+            "title": "23",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>David looks confused. <voice name=\"Geraint\">\"Yes, we don't really know him that well. He only moved here about four months ago. Personally I I'm not too interested; he never says good morning back to us, does he Margaret?\" <voice name=\"Geraint\">\"He does not.\"</voice></voice> A voice from the living room says.\nDo you: \nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "23",
+            "parent": "22",
+            "conditions": "#Ask_about_the_man_living_alone."
+        },
+        {
+            "type": "standard",
+            "title": "24",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Right. Well I think that's everything. Thanks very much for your time.\" Your and Haynes close the door and walk back onto the street. You walk up to the house next door and knock. <voice name=\"Geraint\">\"Can I help you? I'm round the side.\" A voice says. You walk around to the alleyway, trying not to crush any flowers. There's a man, on his knees planting in a flowerbed. [Player]\"Sorry to interrupt - we're just wondering if you heard anything unusual last night?\" [Ernie]\"Don't worry, I'm just about done. It's Ernie, by the way.\" He stands and thinks visibly. [Ernie]\"Well, not from my house. But I do like to go for walks sometimes, and I was walking around here and I wasn't sure if I heard something like a bang. It was quite muffled though, I just assumed it was the wind knocking a bin over or something.\"</voice></voice> Haynes is writing something down.  \nDo you: \nAsk where specifically he was?\nAsk if he saw anything?\nAsk if he was with anyone?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "24",
+            "parent": "23",
+            "conditions": "#End_the_interview"
+        },
+        {
+            "type": "standard",
+            "title": "25",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Just near the castle. I didn't go that near, mind you; I was just passing around it.\"</voice>\nDo you: \nAsk if he was with anyone?\nAsk if he saw anybody?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "25",
+            "parent": "24",
+            "conditions": "#Ask_where_specifically_he_was"
+        },
+        {
+            "type": "standard",
+            "title": "27",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Just my own company. There wasn't anyone else around, I quite prefer it like that.\"</voice>\nDo you: \nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "27",
+            "parent": "25",
+            "conditions": "#Ask_if_he_was_with_anyone"
+        },
+        {
+            "type": "standard",
+            "title": "28",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"That's really helpful. Thanks for your time, we'll let you get back to the flowers.\" You and Haynes walk back to the car. <voice name=\"Geraint\">\"Well, that was interesting. Doesn't really narrow anything down though.\" [Player]\"Let's check on the forensics, they'll have found something by now.\" You head back to the station. After arriving, you barely walk in the main entrance before Kathryn, the pathologist, walks up to you. <voice name=\"Geraint\">\"There you are. We've done the post-mortem, you can see the results later but it's ready now?\" [Player]\"Thanks. Let's do it now, anything of note?\"</voice></voice></voice> You walk to the examination room; the man is on a table looking not particularly alive.\nDo you: \nAsk if the fall killed him?\nAsk for the cause of death?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "28",
+            "parent": "27",
+            "conditions": "#End_the_interview"
+        },
+        {
+            "type": "standard",
+            "title": "29",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Well, actually, that was pretty easily to rule out. You see, it's quite unlikely that he died from the fall because of the pretty large shotgun wound in his back. And we didn't find any signs that he fell.\"</voice>\nDo you: \nAsk for the time of death?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "29",
+            "parent": "28",
+            "conditions": "#Ask_if_the_fall_killed_him"
+        },
+        {
+            "type": "standard",
+            "title": "31",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Some time between two and four in the morning. We can't really narrow it down any more than that.\"</voice>\nDo you: \nAsk if we know who he is?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "31",
+            "parent": "29",
+            "conditions": "#Ask_for_the_time_of_death"
+        },
+        {
+            "type": "standard",
+            "title": "32",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>[Kathryn]\"We didn't until about half an hour ago. Someone apparently found a dropped wallet and turned it in, it looks like it's his. Tony Marsden, is who we think he is. But from what I've heard, there's not much of a paper trail around his name. No records, very little to find out.\nDo you: \nAsk if any other DNA was found?\nAsk if anything else was found at the scene?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "32",
+            "parent": "31",
+            "conditions": "#Ask_if_we_know_who_he_is"
+        },
+        {
+            "type": "standard",
+            "title": "33",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"We found someone else's blood at the scene, on a torch that had been dropped. Wasn't very bright of them\" <voice name=\"Geraint\">\"So maybe in a bit of a panic.\" Haynes says. [Kathryn]\"Maybe. I don't know, if they brought a shotgun they must have been surely expecting it?\"</voice></voice> Kathryn replies.\nDo you: \nAsk if there's anything else?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "33",
+            "parent": "32",
+            "conditions": "#Ask_if_any_other_DNA_was_found"
+        },
+        {
+            "type": "standard",
+            "title": "35",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"No, I think that's it. The report will be done in an hour or so, I'll let you know if anything changes.\" <voice name=\"Geraint\">\"Thanks for this.\" You reply, leaving the room with Haynes. <voice name=\"Geraint\">\"We should go back and get the walker, right?\"</voice></voice></voice> You think it over.\nDo you: \nAgree, go back and interrogate the lone walker?\nDisagree - but go to find the lone young man?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "35",
+            "parent": "33",
+            "conditions": "#Ask_if_there_s_anything_else"
+        },
+        {
+            "type": "standard",
+            "title": "36",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Yes, I agree. Let's go ask him a few more questions\"</voice>. You walk out of the police station.</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "36",
+            "parent": "35",
+            "conditions": "#Agree,_go_back_and_interrogate_the_lone_walker"
+        },
+        {
+            "type": "standard",
+            "title": "37",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"I don't know, I'm just not seeing it. But let's go find him anyway, as well as the man in a hurry.\"</voice> You both leave the station.</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "37",
+            "parent": "35",
+            "previous_sibling": "36",
+            "conditions": "#Disagree_-_but_go_to_find_the_lone_young_man"
+        },
+        {
+            "type": "standard",
+            "title": "34",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"We found a torch, along with blood which we haven't been able to match with the victim. <voice name=\"Geraint\">\"So maybe in a bit of a panic.\" Haynes says. [Kathryn]\"Maybe. I don't know, if they brought a shotgun they must have been surely expecting it?\"</voice></voice> Kathryn replies. \nDo you: \nAsk if there's anything else?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "34",
+            "parent": "32",
+            "previous_sibling": "33",
+            "conditions": "#Ask_if_anything_else_was_found_at_the_scene"
+        },
+        {
+            "type": "standard",
+            "title": "35",
+            "parent": "34",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "35"
+            },
+            "context": {},
+            "dialog_node": "34-35",
+            "conditions": "#Ask_if_there_s_anything_else"
+        },
+        {
+            "type": "standard",
+            "title": "30",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Yes, well that was pretty clear. He was shot in the back with a shotgun. He would have died within minutes.\"</voice>\nDo you: \nAsk for the time of death?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "30",
+            "parent": "28",
+            "previous_sibling": "29",
+            "conditions": "#Ask_for_the_cause_of_death"
+        },
+        {
+            "type": "standard",
+            "title": "31",
+            "parent": "30",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "31"
+            },
+            "context": {},
+            "dialog_node": "30-31",
+            "conditions": "#Ask_for_the_time_of_death"
+        },
+        {
+            "type": "standard",
+            "title": "26",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Er, no. No, I don't remember seeing anybody.\"</voice>\nDo you: \nEnd the interview?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "26",
+            "parent": "25",
+            "previous_sibling": "27",
+            "conditions": "#Ask_if_he_saw_anybody"
+        },
+        {
+            "type": "standard",
+            "title": "28",
+            "parent": "26",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "28"
+            },
+            "context": {},
+            "dialog_node": "26-28",
+            "conditions": "#End_the_interview"
+        },
+        {
+            "type": "standard",
+            "title": "26",
+            "parent": "24",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "26"
+            },
+            "context": {},
+            "dialog_node": "24-26",
+            "conditions": "#Ask_if_he_saw_anything",
+            "previous_sibling": "25"
+        },
+        {
+            "type": "standard",
+            "title": "27",
+            "parent": "24",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "27"
+            },
+            "context": {},
+            "dialog_node": "24-27",
+            "conditions": "#Ask_if_he_was_with_anyone",
+            "previous_sibling": "24-26"
+        },
+        {
+            "type": "standard",
+            "title": "24",
+            "parent": "22",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "24"
+            },
+            "context": {},
+            "dialog_node": "22-24",
+            "conditions": "#End_the_interview",
+            "previous_sibling": "23"
+        },
+        {
+            "type": "standard",
+            "title": "22",
+            "parent": "20",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "22"
+            },
+            "context": {},
+            "dialog_node": "20-22",
+            "conditions": "#Ask_if_he_s_alright",
+            "previous_sibling": "21"
+        },
+        {
+            "type": "standard",
+            "title": "19",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Haynes, look round the side, is there anyone in there?\"</voice>. You try to see through the glass.\nDo you: \nRing the doorbell again?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "19",
+            "parent": "17",
+            "previous_sibling": "18",
+            "conditions": "#Send_Haynes_round_the_windows_to_look"
+        },
+        {
+            "type": "standard",
+            "title": "20",
+            "parent": "19",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "20"
+            },
+            "context": {},
+            "dialog_node": "19-20",
+            "conditions": "#Ring_the_doorbell_again"
+        },
+        {
+            "type": "standard",
+            "title": "17",
+            "parent": "15",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "17"
+            },
+            "context": {},
+            "dialog_node": "15-17",
+            "conditions": "#End_the_interview",
+            "previous_sibling": "16"
+        },
+        {
+            "type": "standard",
+            "title": "16",
+            "parent": "14",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "16"
+            },
+            "context": {},
+            "dialog_node": "14-16",
+            "conditions": "#Ask_if_her_partner_mentioned_anything",
+            "previous_sibling": "15"
+        },
+        {
+            "type": "standard",
+            "title": "15",
+            "parent": "13",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "15"
+            },
+            "context": {},
+            "dialog_node": "13-15",
+            "conditions": "#Ask_whether_they_were_near_the_castle",
+            "previous_sibling": "14"
         },
         {
             "type": "standard",

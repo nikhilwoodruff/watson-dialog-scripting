@@ -1,1 +1,556 @@
-{"intents": [{"intent": "Take_the_right_door", "examples": [{"text": "Take the right door"}]}, {"intent": "Take_the_left_door", "examples": [{"text": "Take the left door"}]}], "entities": [], "metadata": {"api_version": {"major_version": "v2", "minor_version": "2018-11-08"}}, "webhooks": [{"url": "", "name": "main_webhook", "headers": []}], "dialog_nodes": [{"type": "standard", "title": "1", "output": {"generic": [{"values": [{"text": "<speak>The start of the dialog. There's two doors.\nDo you: \nTake the left door?\nTake the right door?\n</speak>"}], "response_type": "text", "selection_policy": "sequential"}]}, "context": {}, "dialog_node": "1", "conditions": "conversation_start"}, {"type": "standard", "title": "2", "output": {"generic": [{"values": [{"text": "<speak>You died.</speak>"}], "response_type": "text", "selection_policy": "sequential"}]}, "context": {}, "dialog_node": "2", "parent": "1", "conditions": "#Take_the_left_door"}, {"type": "standard", "title": "3", "output": {"generic": [{"values": [{"text": "<speak>You won.</speak>"}], "response_type": "text", "selection_policy": "sequential"}]}, "context": {}, "dialog_node": "3", "parent": "1", "previous_sibling": "2", "conditions": "#Take_the_right_door"}], "counterexamples": [], "system_settings": {"off_topic": {"enabled": false}, "disambiguation": {"prompt": "Did you mean:", "enabled": true, "randomize": true, "max_suggestions": 5, "suggestion_text_policy": "user_label", "none_of_the_above_prompt": "None of the above."}, "system_entities": {"enabled": true}, "human_agent_assist": {"prompt": "Did you mean:"}, "intent_classification": {"training_backend_version": "v2"}, "spelling_auto_correct": true}, "learning_opt_out": false, "name": "Murder Mystery Game", "language": "en", "description": ""}
+{
+    "intents": [
+        {
+            "intent": "Ask_who_Karl_is",
+            "examples": [
+                {
+                    "text": "Ask who Karl is"
+                }
+            ]
+        },
+        {
+            "intent": "Suggest_natural_causes",
+            "examples": [
+                {
+                    "text": "Suggest natural causes"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_if_he_could_have_fallen",
+            "examples": [
+                {
+                    "text": "Ask if he could have fallen"
+                }
+            ]
+        },
+        {
+            "intent": "Search_around_the_body",
+            "examples": [
+                {
+                    "text": "Search around the body"
+                }
+            ]
+        },
+        {
+            "intent": "Head_back_to_the_car",
+            "examples": [
+                {
+                    "text": "Head back to the car"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_for_any_other_remarks",
+            "examples": [
+                {
+                    "text": "Ask for any other remarks"
+                }
+            ]
+        },
+        {
+            "intent": "State_he_died_from_blunt_force_trauma",
+            "examples": [
+                {
+                    "text": "State he died from blunt force trauma"
+                }
+            ]
+        },
+        {
+            "intent": "Check_the_time",
+            "examples": [
+                {
+                    "text": "Check the time"
+                }
+            ]
+        },
+        {
+            "intent": "Suggest_he_fell_from_the_wall",
+            "examples": [
+                {
+                    "text": "Suggest he fell from the wall"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_what_happened",
+            "examples": [
+                {
+                    "text": "Ask what happened"
+                }
+            ]
+        },
+        {
+            "intent": "Wait_for_a_few_hours",
+            "examples": [
+                {
+                    "text": "Wait for a few hours"
+                }
+            ]
+        },
+        {
+            "intent": "Ask_to_look_at_the_body",
+            "examples": [
+                {
+                    "text": "Ask to look at the body"
+                }
+            ]
+        }
+    ],
+    "entities": [],
+    "metadata": {
+        "api_version": {
+            "major_version": "v2",
+            "minor_version": "2018-11-08"
+        }
+    },
+    "webhooks": [
+        {
+            "url": "",
+            "name": "main_webhook",
+            "headers": []
+        }
+    ],
+    "dialog_nodes": [
+        {
+            "type": "standard",
+            "title": "1",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>It's the early hours of the morning: cold wet, and the mud gets everywhere as you trudge through it. <voice name=\"Geraint\">\"I see him, he's over there.\"</voice> Haynes, your partner, says, shining his torch at something in the distance. You can't quite make it out, against the glare of the torch on the walls of Barnard castle. As you approach, a figure comes into view: a man, standing in a yellow raincoat, and something on the ground.\nDo you: \nCheck the time?\nAsk what happened?\nAsk who Karl is?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "1",
+            "conditions": "conversation_start"
+        },
+        {
+            "type": "standard",
+            "title": "2",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>The time is 4:03 AM.\nDo you: \nAsk to look at the body?\nSearch around the body?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "2",
+            "parent": "1",
+            "conditions": "#Check_the_time"
+        },
+        {
+            "type": "standard",
+            "title": "5",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>You turn your eyes to the ground. There's not much to make out - the mud covers most of it. There might be blood, but it's so covered by the dirt that it all looks the same. The clothing must be dark, and looks like there's a coat and dark trousers. He is at the base of the castle wall, and his limbs are spread out, as if he'd fallen from a height.\nDo you: \nAsk for any other remarks?\nAsk if he could have fallen?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "5",
+            "parent": "2",
+            "conditions": "#Ask_to_look_at_the_body"
+        },
+        {
+            "type": "standard",
+            "title": "7",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Now that I think about it, I did hear some shouting for a few minutes after the first noise. Not sure, though.\" Karl says. The others are arriving now. You need to head back to the station with Haynes. <voice name=\"Geraint\">\"Come on, let forensics do their job\"</voice></voice>, you say to him.\nDo you: \nHead back to the car?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "7",
+            "parent": "5",
+            "conditions": "#Ask_for_any_other_remarks"
+        },
+        {
+            "type": "standard",
+            "title": "9",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>The drive to the station doesn't take long, and Haynes is silent for most of it. You walk up the stairs quickly, and enter your office. [Player]'Alright, so what have we got?' You ask Haynes. He replies, writing on a whiteboard as he speaks: <voice name=\"Geraint\">\"So. Profile. Middle-aged. White male. Blond hair, no glasses. Location of death, Barnard castle, on the green. Injury unknown yet. Possible causes of death...\"</voice>\nDo you: \nSuggest natural causes?\nSuggest he fell from the wall?\nState he died from blunt force trauma?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "9",
+            "parent": "7",
+            "conditions": "#Head_back_to_the_car"
+        },
+        {
+            "type": "standard",
+            "title": "10",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>Haynes gives you a look, as if to ask if you are serious. Nevertheless, he adds it to the list. <voice name=\"Geraint\">\"Right. Any better ideas?\"</voice>\nDo you: \nSuggest he fell from the wall?\nState he died from blunt force trauma?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "10",
+            "parent": "9",
+            "conditions": "#Suggest_natural_causes"
+        },
+        {
+            "type": "standard",
+            "title": "11",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"I think he was in the right position for it. We'll have to wait for forensics though to confirm though.\" Haynes replies. You look at the whiteboard. It's not exactly full. <voice name=\"Geraint\">\"Well, let's see where we are after interviewing the neighbours. Time?\"[Haynes] \"6:45 AM\". [Player]\"Ok, give it a few hours, then weï'll head out.\"</voice></voice>\nDo you: \nWait for a few hours?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "11",
+            "parent": "10",
+            "conditions": "#Suggest_he_fell_from_the_wall"
+        },
+        {
+            "type": "standard",
+            "title": "13",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>With the sun fully up, there's a lot more people out as you drive through the streets. You stop at a row of houses, just over the road from the castle. [Player\"Ok, we'll check these first.\" You say to Haynes. You get out, and look at the first few houses. Number 13 has a very nicely decorated driveway, plenty of plantlife and a few baskets on the doorstep, but no car. 14 has two hatchbacks, and you can hear talking inside. 15 is not very decorated, and has a sedan outside. 16 has a Ford Focus, and a well-looked after paved driveway. You walk up to number 14 and reach for the doorbell - without warning it opens suddenly.</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "13",
+            "parent": "11",
+            "conditions": "#Wait_for_a_few_hours"
+        },
+        {
+            "type": "standard",
+            "title": "12",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Could be - but I didn't see any tracks leading away.\" Haynes says. [Haynes]\"Well, I didn't see ours either, between the mud and the dark.\" You reply. You look at the whiteboard. It's not exactly full. <voice name=\"Geraint\">\"Well, let's see where we are after interviewing the neighbours. Time?\"[Haynes] \"6:45\". [Player]\"Ok, give it a few hours, then we'll head out.\"</voice></voice>\nDo you: \nWait for a few hours?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "12",
+            "parent": "10",
+            "previous_sibling": "11",
+            "conditions": "#State_he_died_from_blunt_force_trauma"
+        },
+        {
+            "type": "standard",
+            "title": "13",
+            "parent": "12",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "13"
+            },
+            "context": {},
+            "dialog_node": "12-13",
+            "conditions": "#Wait_for_a_few_hours"
+        },
+        {
+            "type": "standard",
+            "title": "11",
+            "parent": "9",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "11"
+            },
+            "context": {},
+            "dialog_node": "9-11",
+            "conditions": "#Suggest_he_fell_from_the_wall",
+            "previous_sibling": "10"
+        },
+        {
+            "type": "standard",
+            "title": "12",
+            "parent": "9",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "12"
+            },
+            "context": {},
+            "dialog_node": "9-12",
+            "conditions": "#State_he_died_from_blunt_force_trauma",
+            "previous_sibling": "9-11"
+        },
+        {
+            "type": "standard",
+            "title": "8",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Well, maybe? I don't know if it would've definitely killed him.\" Karl says. The others are arriving now. You need to head back to the station with Haynes. <voice name=\"Geraint\">\"Come on, let forensics do their job\"</voice></voice>, you say to him\nDo you: \nHead back to the car?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "8",
+            "parent": "5",
+            "previous_sibling": "7",
+            "conditions": "#Ask_if_he_could_have_fallen"
+        },
+        {
+            "type": "standard",
+            "title": "9",
+            "parent": "8",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "9"
+            },
+            "context": {},
+            "dialog_node": "8-9",
+            "conditions": "#Head_back_to_the_car"
+        },
+        {
+            "type": "standard",
+            "title": "6",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak>You move the torch around the body, finding nothing - except for when a silver object flashes back. It's a torch on the ground. <voice name=\"Geraint\">\"This yours?\" You ask both men. They shake their heads. [Player]\"Ok, well we won't touch it.\"</voice>You can see behind you more officers arriving.\nDo you: \nAsk for any other remarks?\nAsk if he could have fallen?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "6",
+            "parent": "2",
+            "previous_sibling": "5",
+            "conditions": "#Search_around_the_body"
+        },
+        {
+            "type": "standard",
+            "title": "7",
+            "parent": "6",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "7"
+            },
+            "context": {},
+            "dialog_node": "6-7",
+            "conditions": "#Ask_for_any_other_remarks"
+        },
+        {
+            "type": "standard",
+            "title": "8",
+            "parent": "6",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "8"
+            },
+            "context": {},
+            "dialog_node": "6-8",
+            "conditions": "#Ask_if_he_could_have_fallen",
+            "previous_sibling": "6-7"
+        },
+        {
+            "type": "standard",
+            "title": "3",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"I don't know, except for that I found him 20 minutes ago now. I heard some noise earlier. Well, actually I heard a few noises, more like bangs, but I was tired - so can't remember exactly. I walk out, see someone outside, so I follow them. They don't move much, and that's when I realise this guy wasn't alive. I haven't touched him or anything - just called the police.\"</voice>\nDo you: \nAsk to look at the body?\nSearch around the body?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "3",
+            "parent": "1",
+            "previous_sibling": "2",
+            "conditions": "#Ask_what_happened"
+        },
+        {
+            "type": "standard",
+            "title": "5",
+            "parent": "3",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "5"
+            },
+            "context": {},
+            "dialog_node": "3-5",
+            "conditions": "#Ask_to_look_at_the_body"
+        },
+        {
+            "type": "standard",
+            "title": "6",
+            "parent": "3",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "6"
+            },
+            "context": {},
+            "dialog_node": "3-6",
+            "conditions": "#Search_around_the_body",
+            "previous_sibling": "3-5"
+        },
+        {
+            "type": "standard",
+            "title": "4",
+            "output": {
+                "generic": [
+                    {
+                        "values": [
+                            {
+                                "text": "<speak><voice name=\"Geraint\">\"Oh, er, Karl Smith. I live locally, I don't have any official business here. I just like to watch over the green.\"</voice>\nDo you: \nAsk to look at the body?\nSearch around the body?\n</speak>"
+                            }
+                        ],
+                        "response_type": "text",
+                        "selection_policy": "sequential"
+                    }
+                ]
+            },
+            "context": {},
+            "dialog_node": "4",
+            "parent": "1",
+            "previous_sibling": "3",
+            "conditions": "#Ask_who_Karl_is"
+        },
+        {
+            "type": "standard",
+            "title": "5",
+            "parent": "4",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "5"
+            },
+            "context": {},
+            "dialog_node": "4-5",
+            "conditions": "#Ask_to_look_at_the_body"
+        },
+        {
+            "type": "standard",
+            "title": "6",
+            "parent": "4",
+            "next_step": {
+                "behavior": "jump_to",
+                "selector": "condition",
+                "dialog_node": "6"
+            },
+            "context": {},
+            "dialog_node": "4-6",
+            "conditions": "#Search_around_the_body",
+            "previous_sibling": "4-5"
+        }
+    ],
+    "counterexamples": [],
+    "system_settings": {
+        "off_topic": {
+            "enabled": false
+        },
+        "disambiguation": {
+            "prompt": "Did you mean:",
+            "enabled": true,
+            "randomize": true,
+            "max_suggestions": 5,
+            "suggestion_text_policy": "user_label",
+            "none_of_the_above_prompt": "None of the above."
+        },
+        "system_entities": {
+            "enabled": true
+        },
+        "human_agent_assist": {
+            "prompt": "Did you mean:"
+        },
+        "intent_classification": {
+            "training_backend_version": "v2"
+        },
+        "spelling_auto_correct": true
+    },
+    "learning_opt_out": false,
+    "name": "Scripted Dialog",
+    "language": "en",
+    "description": ""
+}

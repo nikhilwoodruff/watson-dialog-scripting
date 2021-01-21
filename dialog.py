@@ -1,6 +1,7 @@
 import json
 import re
 import argparse
+import csv
 
 class Intent:
     def __init__(self, id, *examples):
@@ -13,6 +14,32 @@ class Intent:
             examples=[dict(text=example) for example in self.examples]
         )
         return encoded
+
+class StoryNodePointer:
+    def __init__(self, source, target, condition, previous_sibling):
+        self.source = source
+        self.target = target
+        self.conditions = condition
+        self.previous_sibling = previous_sibling
+        self.id = self.source.id + "-" + self.target.id
+    
+    def encode(self):
+        node = dict(
+            type="standard",
+            title=self.target.id,
+            parent=self.source.id,
+            next_step=dict(
+                behavior="jump_to",
+                selector="condition",
+                dialog_node=self.target.id
+            ),
+            context=dict(),
+            dialog_node=self.id,
+            conditions=self.conditions
+        )
+        if self.previous_sibling is not None:
+            node["previous_sibling"] = self.previous_sibling.id
+        return node
 
 class StoryNode:
     def __init__(self, id, text, responses, children):
@@ -52,13 +79,21 @@ class StoryNode:
         nodes = [self]
         previous_sibling = None
         for response in self.children.keys():
+            is_pointer = False
             child = story_nodes[self.children[response]]
-            child.parent = story_nodes[self.id]
+            if child.parent is None:
+                child.parent = story_nodes[self.id]
+            else:
+                child = StoryNodePointer(self, child, response, previous_sibling)
+                is_pointer = True
             if previous_sibling is not None:
                 child.previous_sibling = previous_sibling
             previous_sibling = child
             child.conditions = response
-            nodes += child.tree(story_nodes)
+            if not is_pointer:
+                nodes += child.tree(story_nodes)
+            else:
+                nodes += [child]
         return nodes
 
 class StoryTree:
@@ -73,14 +108,14 @@ class StoryTree:
     def load_from_csv(self, filename):
         self.nodes = []
         with open(filename, "r") as f:
-            for line in f.readlines():
-                split_line = line[:-1].split("\t")
-                split_line = list(filter(lambda field : field != "", split_line))
-                id, text, = split_line[0], split_line[1]
+            reader = csv.reader(f)
+            for line in reader:
+                line = list(filter(lambda field : field != "", line))
+                id, text, = line[0], line[1]
                 node = StoryNode(id, text, [], [])
-                num_responses = (len(split_line) - 2) // 2
+                num_responses = (len(line) - 2) // 2
                 if num_responses > 0:
-                    behaviour = split_line[2:]
+                    behaviour = line[2:]
                 for response, child in zip(behaviour[:num_responses], behaviour[num_responses:]):
                     node.children[response] = child
                 self.nodes += [node]
@@ -183,13 +218,13 @@ class StoryTree:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Utility for converting dialogue scripts into IBM Watson Dialog Skills.")
-    parser.add_argument("dialog_file", help="A TSV file with rows containing node ID, node text, *possible responses, *next nodes.")
+    parser.add_argument("dialog_file", help="A CSV file with rows containing node ID, node text, *possible responses, *next nodes.")
     parser.add_argument("--voice_file", help="A CSV file with a row for each alias, SSML voice name pair. Aliases are encoded into SSML when found as [Alias]\"speech\".")
     parser.add_argument("--output", help="The output file to write to.", default="dialog.json")
     args = parser.parse_args()
     tree = StoryTree(filename=args.dialog_file)
     if args.voice_file is not None:
         tree.load_voice_file(args.voice_file)
-    with open(args.output, "w+") as f:
+    with open(args.output, "w+", encoding="utf-8") as f:
         f.write(tree.export())
     print(f"Completed, output saved in {args.output}.")

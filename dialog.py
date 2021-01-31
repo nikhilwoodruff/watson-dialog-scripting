@@ -152,7 +152,7 @@ class StoryTree:
         response_to_intent = {}
         for i in range(len(responses)):
             if responses[i] not in ["conversation_start", "anything_else"]:
-                safe_response = responses[i].replace(" ", "_").replace("'", "_")
+                safe_response = responses[i].replace(" ", "_").replace("'", "_").replace(",", "_").lower()
                 intent = Intent(safe_response, responses[i])
                 intents += [intent.encode()]
                 response_to_intent[responses[i]] = "#" + safe_response
@@ -165,7 +165,8 @@ class StoryTree:
                     new_responses[response] = child
             node.children = new_responses
             for name, voice_name in self.voices.items():
-                node.text = re.sub(f'\[{name}\](\".*\")', f'<voice name=\"{voice_name}\">\\1</voice>', node.text)
+                pattern = f'\[{name}\](?:\s*)((?:\\")+[^\\"]*(?:\\")+)'
+                node.text = re.sub(pattern, f'<voice name=\"{voice_name}\">\\1</voice>', node.text)
         nodes = {node.id : node for node in self.nodes}
         tree = nodes[list(nodes.keys())[0]].tree(nodes)
         tree[0].conditions = "conversation_start"

@@ -2,6 +2,7 @@ import json
 import re
 import argparse
 import csv
+import random
 
 class Intent:
     def __init__(self, id, *examples):
@@ -21,7 +22,7 @@ class StoryNodePointer:
         self.target = target
         self.conditions = condition
         self.previous_sibling = previous_sibling
-        self.id = self.source.id + "-" + self.target.id
+        self.id = self.source.id + "-" + self.target.id + "-" + str(random.randint(1, 10000))
     
     def encode(self):
         node = dict(
@@ -51,13 +52,14 @@ class StoryNode:
         self.conditions = None
 
     def encode(self):
+        text = self.text.replace("\n", " ").replace(":", "-").replace("\"", "\'").replace(",", " ")
         node = dict(
             type="standard",
             title=self.id,
             output=dict(
                 generic=[dict(
                     values=[dict(
-                        text=f"<speak>{self.text}</speak>"
+                        text=f'<speak>{text}</speak>'
                     )],
                     response_type="text",
                     selection_policy="sequential"
@@ -147,8 +149,9 @@ class StoryTree:
             for response in node.children.keys():
                 responses += [response]
                 node.text += response + "?\n"
-        responses = list(set(responses))
+        responses = list(set(responses)) + ["prompt continue", "first start", "no"]
         intents = []
+        intent_to_node_id = {}
         response_to_intent = {}
         for i in range(len(responses)):
             if responses[i] not in ["conversation_start", "anything_else"]:
@@ -161,14 +164,19 @@ class StoryTree:
             for response, child in node.children.items():
                 if response not in ["conversation_start", "anything_else"]:
                     new_responses[response_to_intent[response]] = child
+                    intent_to_node_id[response_to_intent[response]] = child
                 else:
                     new_responses[response] = child
             node.children = new_responses
             for name, voice_name in self.voices.items():
                 pattern = f'\[{name}\](?:\s*)((?:\\")+[^\\"]*(?:\\")+)'
-                node.text = re.sub(pattern, f'<voice name=\"{voice_name}\">\\1</voice>', node.text)
+                node.text = re.sub(pattern, f'<voice name=\'{voice_name}\'>\\1</voice>', node.text)
         nodes = {node.id : node for node in self.nodes}
-        tree = nodes[list(nodes.keys())[0]].tree(nodes)
+        first_node = list(nodes.keys())[0]
+        nodes["load_state"] = StoryNode("load_state", "Would you like to continue from where you left off?", ["#yes", "#no"], ["continue_from_point", "1"])
+        nodes["continue_from_point"] = StoryNode("continue_from_point", "Please enter the last phrase used", list(intent_to_node_id.keys()), list(intent_to_node_id.values()))
+        nodes["start"] = StoryNode("start", "Start node", ["#prompt_continue", "#first_start"], ["load_state", first_node])
+        tree = nodes["start"].tree(nodes)
         tree[0].conditions = "conversation_start"
         dialog_nodes = [node.encode() for node in tree]
         encoded = dict(
